@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+    <style>
+        body {
+            background-image: url('index.jpg');
+            /* Replace 'index.jpg' with the path to your background image */
+            background-size: 100%;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            /* Center align all content */
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            font-weight: bold;
+            /* Make the heading bold */
+        }
+
+        /* Style for the patient name input */
+        #patientName,
+        #appointmentDate {
+            font-size: 24px;
+            /* Increase font size */
+            font-weight: bold;
+            /* Make the font bold */
+            padding: 5px;
+            /* Add padding for better appearance */
+            margin-bottom: 10px;
+            /* Add some space below the input */
+        }
+
+        /* Style for the buttons */
+        button {
+            font-size: 20px;
+            /* Increase button font size */
+            padding: 10px 20px;
+            /* Add padding for better appearance */
+            margin: 5px;
+            /* Add margin between buttons */
+        }
+
+        .lab {
+            font-size: 30px;
+            color: #FFFDE7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book an Appointment</h1>
+    <form action="/submit" method="POST">
+        <!-- Apply styles to the patient name input -->
+        <label class="lab" for="patientName">Patient Name:</label><br>
+        <input type="text" id="patientName" name="patientName"><br>
+        <label class="lab" for="appointmentDate">Appointment Date:</label><br>
+        <input type="date" id="appointmentDate" name="appointmentDate"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Add Find Doctors Button -->
+    <a href="doctor.html">
+        <button>Find Doctors</button>
+    </a>
+
+    <button onclick="openPatientPage()">View Previous Records</button>
+
+    <script>
+        // JavaScript functions for button actions
+        function openPatientPage() {
+            // Open patient.html page
+            window.location.href = "patient.html";
+        }
+    </script>
+</body>
+</html>

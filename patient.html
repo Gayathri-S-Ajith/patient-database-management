@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details</title>
+    <style>
+        /* CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center; /* Center-align the content */
+            padding-top: 50px; /* Add padding to center vertically */
+            background-image: url("patient.jpeg"); /* Add background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .details-container {
+            margin-top: 20px; /* Add margin for spacing */
+        }
+
+        .details {
+            display: inline-block; /* Display elements in a line */
+            margin: 0 20px; /* Add margin for spacing */
+        }
+
+        /* Additional styling for better appearance */
+        input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PATIENT DETAILS</h1>
+
+    <!-- Container for patient details -->
+    <div class="details-container">
+        <div class="details">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="details">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age">
+        </div>
+        <div class="details">
+            <label for="weight">Weight:</label>
+            <input type="text" id="weight" name="weight">
+        </div>
+    </div>
+
+    <!-- Container for disease and doctor's name -->
+    <div class="details-container">
+        <div class="details">
+            <label for="disease">Disease:</label>
+            <input type="text" id="disease" name="disease">
+        </div>
+        <div class="details">
+            <label for="doctor">Doctor's Name:</label>
+            <input type="text" id="doctor" name="doctor">
+        </div>
+    </div>
+
+    <!-- Container for appointment dates -->
+    <div class="details-container">
+        <div class="details">
+            <label for="first-appointment">Date of First Appointment:</label>
+            <input type="text" id="first-appointment" name="first-appointment">
+        </div>
+        <div class="details">
+            <label for="latest-appointment">Date of Latest Appointment:</label>
+            <input type="text" id="latest-appointment" name="latest-appointment">
+        </div>
+    </div>
+</body>
+</html>

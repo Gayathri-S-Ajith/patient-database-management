@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIMS</title>
+    <style>
+        /* CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #666;
+            padding: 10px;
+            text-align: center;
+            position: relative; /* Added position relative */
+        }
+        
+      
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature {
+            margin-bottom: 20px;
+        }
+
+        .feature img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Style for the menu bar */
+        .menu-bar {
+            display: none;
+            background-color: #fefcfcb0;
+            padding: 10px;
+            text-align: center;
+            position: absolute;
+            width: auto; /* Set width to auto */
+            z-index: 1;
+            top: 50px; /* Adjust the top position */
+            margin-top: -50px; /* Add negative margin to overlap the text */
+            left: 50%; /* Position from the middle */
+            transform: translateX(-50%); /* Move it to the left by 50% of its own width */
+        }
+
+        .menu-bar a {
+            color: #0f0e0e;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            display: block; /* Display each menu item on a separate line */
+        }
+
+        .menu-bar.active {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to NIMS website</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#" onclick="toggleMenu()">Services</a>
+        <div class="menu-bar" id="service-menu"> 
+            <a href="index.html">Appointment Scheduling</a>
+            <a href="#">Admit Details</a>
+            <a href="#">Pharmacy</a>
+        </div>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <section class="main-content">
+            <h2>Discover Our Features</h2>
+            <div class="Doctors page">
+                <img src="front.jpg" alt="Feature 1">
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("service-menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

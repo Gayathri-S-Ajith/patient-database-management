@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <style>
+        /* CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("doctor.jpg"); /* Specify the path to your background image */
+            background-size: cover; /* Adjusts the background image size to cover the entire body */
+            background-position: center; /* Centers the background image */
+            padding: 20px;
+            margin: 0; /* Remove default margin */
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #754caf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+
+        /* Additional style to force each button to appear on a separate line */
+        .button-line {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* Style for the menu bar */
+        .menu-bar {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f981;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .menu-bar:hover .menu-content {
+            display: block;
+        }
+
+        .menu-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .menu-content a:hover {
+            background-color: #f1f1f1f8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Appointment Booking</h1>
+
+    <!-- Button Container -->
+    <div class="button-container">
+        <!-- Doctors Name Button -->
+        <div class="button-line">
+            <div class="menu-bar">
+                <button id="doctorButton">Doctors Name</button>
+                <div class="menu-content">
+                    <a href="#" onclick="selectDoctor('Dr.Rahman')">Dr.Rahman - Nuerology</a>
+                    <a href="#" onclick="selectDoctor('Dr.Bhagya')">Dr.Bhagya - Pediatrician</a>
+                    <a href="#" onclick="selectDoctor('Dr.Anitta')">Dr.Anitta - Ortho Medicine</a>
+                    <a href="#" onclick="selectDoctor('Dr.Keerthy')">Dr.Keerthy - Gynecology</a>
+                    <a href="#" onclick="selectDoctor('Dr.Shyam')">Dr.Shyam - Cardiology </a>
+                    <a href="#" onclick="selectDoctor('Dr.Shahal')">Dr.Shahal - General Medicine </a>
+                    <a href="#" onclick="selectDoctor('Dr.Lakshmi')">Dr.Lakshmi - Oncology </a>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Schedule Appointment Button -->
+        <div class="button-line">
+            <a href="page.html"><button>Schedule Appointment</button></a>
+        </div>
+    </div>
+
+    <!-- Display Selected Doctor's Name -->
+    <div class="button-line">
+        <p id="selectedDoctor"></p>
+    </div>
+
+    <script>
+        // JavaScript function to update doctor's name button and display selected doctor's name
+        function selectDoctor(doctorName) {
+            document.getElementById('doctorButton').innerText = doctorName;
+            document.getElementById('selectedDoctor').innerText = "Selected Doctor: " + doctorName;
+        }
+    </script>
+</body>
+</html>
